@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Addballz Shape Generator</title>
+    </head>
+    <body>
+        <h2>Addballz Shape Generator</h2>
+        <p>You may generate your desired shapes for Petz using this Generator. Currently it suppprts circle, <s>star, oval and regular polygons.</s></p>
+        <form id="gen" action="" method="post"> <!-- Why POST? So the url won't get longer' -->
+            <div id="species">
+                <b>Species:</b>
+                <input type="radio" name="species" value="cat" checked />
+                <label>Cat</label>
+                <input type="radio" name="species" value="dog"/>
+                <label>Dog</label>
+                <input type="radio" name="species" value="clotoys"/>
+                <label>Clothez/Toyz</label>
+            </div>
+            <div id="shape">
+                <b>Shape:</b>
+                <input type="radio" name="shape" value="circle" checked />
+                <label>Circle</label>
+                <input type="radio" name="shape" value="star" disabled/>
+                <label>Star</label>
+                <input type="radio" name="shape" value="polygon" disabled/>
+                <label>Polygon</label>
+            </div>
+            <br>
+            <div id="var">
+                <b>Radius:</b>
+                <input id="rad" value="20">
+                <br>
+                <br>
+                <b>Base Ball:</b>
+                <input id="base" value="6">
+                <br>
+                <br>
+                <b>Base Axis:</b>
+                <label>X</label>
+                <input id="axx" value="0" style="width:30px">
+                <label>Y</label>
+                <input id="axy" value="0" style="width:30px">
+                <label>Z</label>
+                <input id="axz" value="0" style="width:30px">
+                <br>
+                <br>
+                <b>X-Rotation:</b>
+                <input id="xrot" value="0">
+                <p>(For example 0: All Y values equal to the given Y axix. 90: All Z values equal to the given Z axis)</p>
+                <b>Color:</b>
+                <input id="col" value="85">
+                <p>Between 0 - 255</p>
+                <b>Fuzz:</b>
+                <input id="fuzz" value="0">
+                <br><br>
+                <b>Outline:</b>
+                <label>Size:</label>
+                <input id="outsize" value="0" style="width:30px">
+                <label>Color:</label>
+                <input id="outcol" value="0" style="width:30px">
+                <p>Color: 0-255</p>
+                 <b>Ball Sizes:</b>
+                <input id="size" value="20">
+                <p>Between 1 - 127</p>
+                 <b>Texture:</b>
+                <input id="texture" value="-1">
+                <p>ID of the texture, -1 for none</p>
+            </div>
+            <input type="button" value="Generate" onclick="generate(); return false;">
+        </form>
+        <br>
+        <div>
+            <b>Result:</b>
+            <div id="res" style="padding: 10px; border: 5px ridge; height: 350px; overflow: scroll;"></div>
+        </div>
+        <script src="shapegenerator.js"></script>
+    </body>
+</html>
