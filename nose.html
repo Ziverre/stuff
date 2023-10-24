@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nose</title>
+    <style>
+        canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+    </style>
+</head>
+<body>
+    <h2>Nose</h2>
+    <canvas width="349" height="349" id="nose"></canvas>
+    <div>
+        Diameter: <input id="d" value="100" onchange="render();">
+    </div>
+    <script src="nose.js"></script>
+    <p>The math behind this is documented on <a href="https://docs.google.com/document/d/1aqU6vTrRQqNqfcTnLuoYxbI67r_2pPMgYuiqOSgG-ik/edit">Reflet's "Petz Graphics Engine" PDF.</a><br>
+    This is coded in Javascript for the sake of making it work on browser.</p>
+</body>
+</html>
